@@ -101,9 +101,8 @@ public class DatabaseLayer {
      */
     public void connect() {
         try {
-            /*connection = DriverManager.getConnection("jdbc:sqlite:"+Paths.get("").toAbsolutePath().toString()+
-                    "\\src\\sqlitejavafxapp\\data\\titanic_database.sqlite");*/
-            connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alex\\Google Drive\\div\\titanic_database.sqlite");
+            connection = DriverManager.getConnection("jdbc:sqlite:"+Paths.get("").toAbsolutePath().toString()+
+                    "\\src\\sqlitejavafxapp\\data\\titanic_database.sqlite");
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }

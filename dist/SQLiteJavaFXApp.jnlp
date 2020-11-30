@@ -8,8 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SQLiteJavaFXApp.jar" size="101636" download="eager" />
-    <jar href="lib\sqlite-jdbc-3.32.3.2.jar" size="7225567" download="eager" />
+    <jar href="SQLiteJavaFXApp.jar" size="101805" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.32.3.2.jar" size="7225569" download="eager" />
   </resources>
 <security>
   <all-permissions/>
