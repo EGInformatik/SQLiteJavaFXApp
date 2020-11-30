@@ -37,14 +37,14 @@ public class FXMLDocumentController implements Initializable {
     private TextField ticketInput;
     @FXML
     private TextField fareInput;
-
-    DatabaseLayer db;
     @FXML
     private TextField ageInput;
     @FXML
     private TextField genderInput;
     @FXML
     private TextField survivedInput;
+    
+    DatabaseLayer db;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -55,7 +55,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void clickAddPassenger(ActionEvent event) {
-        db.addPassenger(nameInput.getText(), ticketInput.getText(), fareInput.getText());
+        db.addPassenger(nameInput.getText(), ticketInput.getText(), fareInput.getText(), ageInput.getText(), genderInput.getText(), survivedInput.getText());
     }
 
     @FXML

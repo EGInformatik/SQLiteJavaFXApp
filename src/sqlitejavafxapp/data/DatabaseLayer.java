@@ -59,7 +59,7 @@ public class DatabaseLayer {
      * Anvender en INSERT-forespørgsel til at indsætte en ny passager i
      * databasen
      */
-    public void addPassenger(String name, String ticket, String fare) {
+    public void addPassenger(String name, String ticket, String fare, String age, String gender, String survived) {
         this.connect();
         String query = "INSERT INTO titanic_passengers (Name, Ticket, Fare, Age, Sex, Survived) "
                 + "VALUES (?,?,?,?, ?, ?)";
@@ -68,9 +68,9 @@ public class DatabaseLayer {
             ps.setString(1, name);
             ps.setString(2, ticket);
             ps.setString(3, fare);
-            ps.setString(4, "32");
-            ps.setString(5, "Male");
-            ps.setString(6, "0");
+            ps.setString(4, age);
+            ps.setString(5, gender);
+            ps.setString(6, survived);
             ps.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(DatabaseLayer.class.getName()).log(Level.SEVERE, null, ex);
@@ -101,8 +101,9 @@ public class DatabaseLayer {
      */
     public void connect() {
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:"+Paths.get("").toAbsolutePath().toString()+
-                    "\\src\\sqlitejavafxapp\\data\\titanic_database.sqlite");
+            /*connection = DriverManager.getConnection("jdbc:sqlite:"+Paths.get("").toAbsolutePath().toString()+
+                    "\\src\\sqlitejavafxapp\\data\\titanic_database.sqlite");*/
+            connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alex\\Google Drive\\div\\titanic_database.sqlite");
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
